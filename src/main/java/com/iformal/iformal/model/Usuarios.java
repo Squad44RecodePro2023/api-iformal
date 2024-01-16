@@ -51,4 +51,7 @@ public class Usuarios {
     @OneToMany(mappedBy = "usuario")
     private List<Avaliacoes> avalicaoes;
     
+    @OneToMany(mappedBy = "usuario")
+    private List<Agendamentos> agendamento;
+    
 }
