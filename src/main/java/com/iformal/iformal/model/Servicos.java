@@ -29,7 +29,7 @@ public class Servicos {
     @Column( nullable = false, length = 255)
     private String descricao;
     @ManyToOne
-    @JoinColumn(name = "categoria_id")
-    private Categorias categoria ;
+    @JoinColumn(name = "id_categoria")
+    private Categorias categoria;
     
 }
