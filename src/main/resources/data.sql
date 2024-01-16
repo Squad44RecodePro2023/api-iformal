@@ -77,3 +77,14 @@ VALUES
 ('Contabilidade para Profissionais Liberais', 'Serviços contábeis para profissionais autônomos', 8),
 ('Aulas de Inglês', 'Instruções particulares em inglês', 9),
 ('Treinamento de Corrida', 'Treinamento específico para corrida', 10);
+
+
+
+-- insert de agendamentos
+
+INSERT INTO agendamentos (data, valor, prestador_id, usuario_id) 
+VALUES ('2024-01-16 15:30:00', 100.50, 1, 2), 
+('2024-01-17 10:45:30', 75.25, 3, 1),
+('2024-01-18 08:15:00', 120.00, 2, 4),
+('2024-01-19 12:00:00', 50.75, 4, 3),
+('2024-01-20 09:30:00', 90.00, 1, 5);
