@@ -37,7 +37,10 @@ public class Prestador {
     @OneToOne
     private Usuarios usuario;
 
-     @OneToMany(mappedBy = "prestador")
+    @OneToMany(mappedBy = "prestador")
     private List<Avaliacoes> avalicaoes;
     
+    
+    @OneToMany(mappedBy = "prestador")
+    private List<Certificados> certificado;
 }
