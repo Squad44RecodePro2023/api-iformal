@@ -35,13 +35,13 @@ public class Usuarios {
     @Column( nullable = false, length = 55, unique = true)
     private String email;
     
-    @Column( nullable = false)
+    @Column( nullable = false, name = "data_nascimento", columnDefinition = "DATE")
     private Date dataNascimento;
     
     @Column( nullable = false, length = 11, columnDefinition = "CHAR(11)")
     private String telefone;
     
-    @Column( nullable = false, length = 13, columnDefinition = "CHAR(13)")
+    @Column( nullable = false, length = 13, unique = true, columnDefinition = "CHAR(14)")
     private String cpf;
 
     @Column( nullable = false)
