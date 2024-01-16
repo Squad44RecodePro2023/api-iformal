@@ -1,9 +1,14 @@
 package com.iformal.iformal.model;
+import org.hibernate.annotations.ManyToAny;
+
 import jakarta.persistence.Column;
 import jakarta.persistence.Entity;
 import jakarta.persistence.GeneratedValue;
 import jakarta.persistence.GenerationType;
 import jakarta.persistence.Id;
+import jakarta.persistence.JoinColumn;
+import jakarta.persistence.ManyToOne;
+import jakarta.persistence.OneToMany;
 import jakarta.persistence.Table;
 import lombok.AllArgsConstructor;
 import lombok.Getter;
@@ -25,7 +30,18 @@ public class Avaliacoes {
     
     @Column( length = 255)
     private String comentario;
+
     @Column(nullable = false, columnDefinition = "TINYINT")
     private int nota;
+
+    @ManyToOne
+    @JoinColumn(name = "usuarios_id")
+    private Usuarios usuario;
+
+    
+    @ManyToOne
+    @JoinColumn(name = "prestador_id")
+    private Prestador prestador;
+
     
 }
