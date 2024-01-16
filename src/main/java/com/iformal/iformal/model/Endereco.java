@@ -23,11 +23,11 @@ public class Endereco {
     private int numero;
     @Column( nullable = false, length = 55)
     private String bairro;
-    @Column( nullable = false, length = 9 )
+    @Column( nullable = false, length = 9, columnDefinition = "CHAR(9)" )
     private String cep;
-    @Column( nullable = false, length = 15)
+    @Column( length = 15)
     private String complemento;
-    @Column( nullable = false, length = 2)
+    @Column( nullable = false, length = 2, columnDefinition = "CHAR(2)")
     private String estado;
     @Column( nullable = false, length = 55)
     private String cidade;
