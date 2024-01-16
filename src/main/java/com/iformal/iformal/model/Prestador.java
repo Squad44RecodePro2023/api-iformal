@@ -43,4 +43,8 @@ public class Prestador {
     
     @OneToMany(mappedBy = "prestador")
     private List<Certificados> certificado;
+
+    
+    @OneToMany(mappedBy = "prestador")
+    private List<Agendamentos> agendamento;
 }
