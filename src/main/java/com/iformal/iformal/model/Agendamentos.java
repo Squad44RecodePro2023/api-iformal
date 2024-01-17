@@ -36,9 +36,8 @@ public class Agendamentos {
     private Prestador prestador;
     @ManyToOne
     @JoinColumn(name="usuario_id")
-    private Usuarios usuario;
-        
-    
-
-    
+    private Usuarios usuario;    
+    @ManyToOne
+    @JoinColumn(name="servico_id")
+    private Servicos servico;          
 }
