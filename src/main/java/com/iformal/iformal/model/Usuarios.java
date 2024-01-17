@@ -38,7 +38,7 @@ public class Usuarios {
     @Column( nullable = false, name = "data_nascimento", columnDefinition = "DATE")
     private Date dataNascimento;
     
-    @Column( nullable = false, length = 11, columnDefinition = "CHAR(11)")
+    @Column(length = 11, columnDefinition = "CHAR(11)")
     private String telefone;
     
     @Column( nullable = false, length = 13, unique = true, columnDefinition = "CHAR(14)")
