@@ -2,9 +2,11 @@ package com.iformal.iformal.services.impl;
 
 import java.util.List;
 
+import org.springframework.beans.BeanUtils;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
+import com.iformal.iformal.dto.ServicoDto;
 import com.iformal.iformal.model.Categorias;
 import com.iformal.iformal.model.Servicos;
 import com.iformal.iformal.repository.ServicosRepository;
@@ -20,15 +22,19 @@ ServicosRepository servicosRepository;
 CategoriaService categoriaService;
 
     @Override
-    public Servicos save(Servicos servico) {
-        Categorias categoria = this.categoriaService.listById(servico.getCategoria().getId());
+    public Servicos save(ServicoDto servicoDto) {
+        Categorias categoria = this.categoriaService.listById(servicoDto.categoriaId());
+        var servico = new Servicos();
+        BeanUtils.copyProperties(servicoDto, servico);
         servico.setCategoria(categoria);
         return this.servicosRepository.save(servico);
     }
 
     @Override
-    public Servicos update(Servicos servico) {
-        Categorias categoria = this.categoriaService.listById(servico.getCategoria().getId());
+    public Servicos update(ServicoDto servicoDto, int id) {
+        var servico = this.listById(id);
+        BeanUtils.copyProperties(servicoDto, servico);
+        Categorias categoria = this.categoriaService.listById(servicoDto.categoriaId());
         servico.setCategoria(categoria);
         return this.servicosRepository.save(servico);
     }
