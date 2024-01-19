@@ -82,9 +82,19 @@ VALUES
 
 -- insert de agendamentos
 
-INSERT INTO agendamentos (data, valor, prestador_id, usuario_id) 
-VALUES ('2024-01-16 15:30:00', 100.50, 1, 2), 
-('2024-01-17 10:45:30', 75.25, 3, 1),
-('2024-01-18 08:15:00', 120.00, 2, 4),
-('2024-01-19 12:00:00', 50.75, 4, 3),
-('2024-01-20 09:30:00', 90.00, 1, 5);
+INSERT INTO agendamentos (data, valor, prestador_id, usuario_id, servico_id) 
+VALUES ('2024-01-16 15:30:00', 100.50, 1, 2, 3), 
+('2024-01-17 10:45:30', 75.25, 3, 1, 3),
+('2024-01-18 08:15:00', 120.00, 2, 4, 2),
+('2024-01-19 12:00:00', 50.75, 4, 3, 1),
+('2024-01-20 09:30:00', 90.00, 1, 5, 4);
+
+
+-- insert avaliaçao
+
+INSERT INTO avaliacao_prestador (comentario, nota, usuarios_id, prestador_id)
+VALUES ("Integer sit amet neque id lacus sollicitudin.", 3, 1, 1),
+("Integer sit amet neque id lacus sollicitudin.", 5, 3, 1),
+("Integer sit amet neque id lacus sollicitudin.", 4, 2, 3),
+("Integer sit amet neque id lacus sollicitudin.", 3, 4, 2),
+("Integer sit amet neque id lacus sollicitudin.", 5, 5, 4);
