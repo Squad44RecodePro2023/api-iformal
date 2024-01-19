@@ -8,7 +8,7 @@ import com.iformal.iformal.model.Agendamentos;
 public interface AgendamentosRepository extends JpaRepository<Agendamentos, Integer>{
 
 
-    List<Agendamentos> findByUsuarioId(int usuarios_id);
-    List<Agendamentos> findByPrestadoId(int prestador_id);
+    List<Agendamentos> findByUsuario_Id(int usuariosId);
+    List<Agendamentos> findByPrestador_Id(int prestadorId);
     
 } 
