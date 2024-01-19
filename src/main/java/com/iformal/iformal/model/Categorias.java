@@ -1,6 +1,8 @@
 package com.iformal.iformal.model;
 import java.util.List;
 
+import com.fasterxml.jackson.annotation.JsonBackReference;
+
 import jakarta.persistence.Column;
 import jakarta.persistence.Entity;
 import jakarta.persistence.GeneratedValue;
@@ -29,6 +31,8 @@ public class Categorias {
     private String nome;
     @Column( nullable = false, length = 255)
     private String descricao;
-    @OneToMany(mappedBy = "categoria")
+    
+    @OneToMany(mappedBy = "categoria")    
+     @JsonBackReference
     private List<Servicos> servicos;
 }

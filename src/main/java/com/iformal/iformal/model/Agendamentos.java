@@ -2,6 +2,7 @@ package com.iformal.iformal.model;
 
 import java.util.Date;
 
+import com.fasterxml.jackson.annotation.JsonManagedReference;
 
 import jakarta.persistence.Column;
 import jakarta.persistence.Entity;
@@ -31,13 +32,19 @@ public class Agendamentos {
     private Date data;
     @Column(nullable = false, columnDefinition = "DECIMAL(10,2)")
     private float valor;
+
     @ManyToOne
     @JoinColumn(name="prestador_id")
+    @JsonManagedReference
     private Prestador prestador;
+
     @ManyToOne
     @JoinColumn(name="usuario_id")
-    private Usuarios usuario;    
+    @JsonManagedReference
+    private Usuarios usuario;  
+
     @ManyToOne
     @JoinColumn(name="servico_id")
+    @JsonManagedReference
     private Servicos servico;          
 }

@@ -1,4 +1,7 @@
 package com.iformal.iformal.model;
+import com.fasterxml.jackson.annotation.JsonManagedReference;
+
+import jakarta.persistence.CascadeType;
 import jakarta.persistence.Column;
 import jakarta.persistence.Entity;
 import jakarta.persistence.GeneratedValue;
@@ -28,8 +31,10 @@ public class Servicos {
     private String nome;
     @Column( nullable = false, length = 255)
     private String descricao;
-    @ManyToOne
+    
+    @ManyToOne (cascade=CascadeType.REMOVE)
     @JoinColumn(name = "id_categoria")
+    @JsonManagedReference
     private Categorias categoria;
     
 }

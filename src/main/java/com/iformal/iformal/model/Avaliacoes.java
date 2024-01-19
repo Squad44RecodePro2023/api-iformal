@@ -1,6 +1,8 @@
 package com.iformal.iformal.model;
 
 
+import com.fasterxml.jackson.annotation.JsonManagedReference;
+
 import jakarta.persistence.Column;
 import jakarta.persistence.Entity;
 import jakarta.persistence.GeneratedValue;
@@ -35,11 +37,13 @@ public class Avaliacoes {
 
     @ManyToOne
     @JoinColumn(name = "usuarios_id")
+    @JsonManagedReference
     private Usuarios usuario;
 
     
     @ManyToOne
     @JoinColumn(name = "prestador_id")
+    @JsonManagedReference
     private Prestador prestador;
 
     
