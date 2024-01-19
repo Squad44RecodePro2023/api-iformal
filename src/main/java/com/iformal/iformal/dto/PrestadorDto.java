@@ -14,7 +14,7 @@ public record PrestadorDto(
         @Size(max = 255, message = "As especialidades devem ter no máximo 255 caracteres") 
         String especialidades,
         @NotNull(message = "O usuário não pode ser nulo") 
-        Long usuarioId
+        int usuarioId
         ) {
 
 }

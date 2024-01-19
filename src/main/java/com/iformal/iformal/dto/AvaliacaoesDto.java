@@ -13,9 +13,9 @@ public record AvaliacaoesDto(
         @Max(value = 5, message = "A nota máxima permitida é 5") 
         int nota,
         @NotNull(message = "O usuário não pode ser nulo") 
-        Long usuarioId,
+        int usuarioId,
         @NotNull(message = "O prestador não pode ser nulo") 
-        Long prestadorId
+        int prestadorId
         ) {
 
 }

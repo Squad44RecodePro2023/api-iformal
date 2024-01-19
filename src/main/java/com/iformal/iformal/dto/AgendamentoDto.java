@@ -10,11 +10,11 @@ public record AgendamentoDto(
     @NotNull(message="O valor não pode ser nulo")
     Float valor,
     @NotNull(message="O prestador não pode ser nulo")
-    Long prestadorId,
+    int prestadorId,
     @NotNull(message="O usuário não pode ser nulo")
-    Long usuarioId,
+    int usuarioId,
     @NotNull(message="O servico não pode ser nulo")
-    Long servicoId
+    int servicoId
     )
 {
 

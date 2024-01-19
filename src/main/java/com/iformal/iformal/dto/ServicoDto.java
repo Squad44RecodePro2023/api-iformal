@@ -11,7 +11,7 @@ public record ServicoDto(
      @NotBlank(message = "A descrição não pode estar vazia") 
      @Size(max = 255, message = "A descrição deve ter no máximo 255 caracteres") 
      String descricao,
-     @NotNull(message = "A categoria não pode ser nula") Long categoriaId
+     @NotNull(message = "A categoria não pode ser nula") int categoriaId
 ) {
     
 }
