@@ -1,11 +1,3 @@
--- inserindo comentarios.
-INSERT INTO comentarios (comentario, autor, nota) VALUES
-('Primeiro comentário', 'Autor1', 4),
-('Segundo comentário', 'Autor2', 5),
-('Terceiro comentário', 'Autor3', 5),
-('Quarto comentário', 'Autor4', 4),
-('Quinto comentário', 'Autor5', 5);
-
 -- inserindo usuarios
 INSERT INTO usuarios (nome, email, data_nascimento, telefone, cpf, logradouro, numero, bairro, cep, complemento, estado, cidade)
 VALUES
@@ -98,3 +90,10 @@ VALUES ("Integer sit amet neque id lacus sollicitudin.", 3, 1, 1),
 ("Integer sit amet neque id lacus sollicitudin.", 4, 2, 3),
 ("Integer sit amet neque id lacus sollicitudin.", 3, 4, 2),
 ("Integer sit amet neque id lacus sollicitudin.", 5, 5, 4);
+
+-- insert comentario
+INSERT INTO comentarios (comentario, autor, nota)
+VALUES ("Pellentesque sed luctus ipsum. Maecenas sit amet lacus tempus, sagittis nulla a, scelerisque felis. Proin ac fringilla metus, a rhoncus diam. Donec dignissim auctor diam, nec vehicula justo tristique id. Praesent finibus fermentum elit, nec.", "Matheus Silva", 4),
+("Nam facilisis in mi a bibendum. Fusce vulputate velit quis eros posuere rutrum. Donec sagittis finibus augue ac euismod. Aenean in aliquam magna, eget elementum justo. Quisque tempus molestie urna, vel tristique lacus lacinia sed.", "Maria Antônia", 5),
+("Nulla facilisi. Suspendisse in turpis dolor. Phasellus at pharetra ex. Nam at pharetra enim. Proin lacus ante, placerat non aliquet maximus, pellentesque vitae nulla. Fusce orci dui, efficitur sed.", "Valéria Carvalho", 5),
+("Praesent vehicula rutrum neque vitae interdum. Maecenas sit amet porttitor libero. Nullam et ex a urna mollis aliquam ut at lorem. Sed faucibus vel lectus nec semper. Nullam placerat rutrum facilisis. Quisque eget interdum nibh.", "Pedro Santos", 5);
